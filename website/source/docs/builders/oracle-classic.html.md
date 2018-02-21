@@ -84,8 +84,13 @@ This builder currently only works with the SSH communicator.
 
  -  `image_name` (string) - The name to assign to the resulting custom image.
 
- - `snapshot_timeout` (time.Duration) - How long to wait for a snapshot to be
- created. Example: `"snapshot_timeout": "15m"`. Default: `20m`.
+ - `snapshot_timeout` (string) - How long to wait for a snapshot to be
+ created. Expects a positive golang Time.Duration string, which is
+a sequence of decimal numbers and a unit suffix; valid suffixes are `ns`
+(nanoseconds), `us` (microseconds), `ms` (milliseconds), `s` (seconds), `m`
+(minutes), and `h` (hours). Examples of valid inputs: `100ms`, `250ms`, `1s`,
+`2.5s`, `2.5m`, `1m30s`.
+Example: `"snapshot_timeout": "15m"`. Default: `20m`.
 
 ## Basic Example
 
