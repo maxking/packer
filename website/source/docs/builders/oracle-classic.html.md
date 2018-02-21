@@ -84,6 +84,9 @@ This builder currently only works with the SSH communicator.
 
  -  `image_name` (string) - The name to assign to the resulting custom image.
 
+ - `snapshot_timeout` (time.Duration) - How long to wait for a snapshot to be
+ created. Example: `"snapshot_timeout": "15m"`. Default: `20m`.
+
 ## Basic Example
 
 Here is a basic example. Note that account specific configuration has been
